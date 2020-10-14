@@ -1,4 +1,0 @@
-class AdminModule {
-	name='admin'
-
-}

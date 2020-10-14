@@ -1,0 +1,78 @@
+{
+    "name": "framz-admin",
+    "version": "0.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "scripts": {
+        "start": "mv tsconfig.json tsconfig; react-scripts start",
+        "build": "mv tsconfig tsconfig.json; rm -rf ./dist; ./node_modules/webpack/bin/webpack.js && npx tsc",
+        "react": "react-scripts build",
+        "test": "jest",
+        "lint": "node_modules/eslint/bin/eslint.js --fix src/*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pbenard73/framz-admin.git"
+    },
+    "author": "BENARD Patrick <pbenard73@gmail.com>",
+    "dependencies": {
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.3.2",
+        "@testing-library/user-event": "^7.1.2",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "3.4.3",
+        "reactizy": "2.0.5"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.11.1",
+        "@babel/plugin-proposal-class-properties": "^7.10.4",
+        "@babel/preset-env": "^7.11.5",
+        "@babel/preset-react": "^7.10.4",
+        "@testing-library/jest-dom": "^5.11.4",
+        "@testing-library/react": "^11.0.4",
+        "babel-jest": "^24.9.0",
+        "babel-loader": "^8.1.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "eslint": "^6.6.0",
+        "eslint-config-prettier": "^6.12.0",
+        "eslint-plugin-react": "^7.21.3",
+        "framz": "0.0.0",
+        "jest": "24.9.0",
+        "node-sass": "^4.14.1",
+        "react": "^16.13.1",
+        "typescript": "^4.0.3",
+        "webpack": "4.42.0",
+        "webpack-cli": "^3.3.12",
+        "webpack-node-externals": "^2.5.1"
+    },
+    "license": "ISC",
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "bugs": {
+        "url": "https://github.com/pbenard73/framz-admin/issues"
+    },
+    "babel": {
+        "plugins": [
+            "@babel/plugin-proposal-class-properties"
+        ],
+        "presets": [
+            "@babel/preset-env",
+            "@babel/preset-react"
+        ]
+    }
+}
