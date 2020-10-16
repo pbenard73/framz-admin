@@ -17,3 +17,5 @@ router.put("/:modelName/:id", auth("edit"), putAction)
 router.post("/:modelName", auth("create"), postAction)
 
 router.delete("/:modelName", auth("delete"), deleteAction)
+
+export default router
