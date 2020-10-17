@@ -8,7 +8,7 @@ export default type => (req, res, next) => {
         return next()
     }
 
-    const role = `ROLE_${modelName.toUpperCase()}_${type.toUpperCase()}`
+    const role = `ROLE_${database.modelsUrl[modelName].toUpperCase()}_${type.toUpperCase()}`
 
     if (aclManager.isGranted(req, role) === false) {
         return next(createError(403))
