@@ -1,2 +1,2 @@
-declare function _default(req: any, res: any, next: any): ((options: any) => void) | undefined;
+declare function _default(req: any, res: any, next: any): any;
 export default _default;
