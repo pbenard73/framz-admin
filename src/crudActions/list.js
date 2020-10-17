@@ -16,10 +16,10 @@ export default (req, res, next) => {
             .catch(error => next(createError(500, error)))
     }
 
-    if (paginationData.page !== null) {
+//    if (paginationData.page === null) {
         return paginate
-    }
-
+  //  }
+/*
     cache
         .get(cacheKey)
         .then(data => {
@@ -32,4 +32,5 @@ export default (req, res, next) => {
         .catch(error => {
             paginate(paginationData)
         })
+       */
 }
