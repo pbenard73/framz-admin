@@ -1,6 +1,7 @@
 import { Module } from "framz"
 
 import crud from "./routers/crud"
+import init from './initializers/acl'
 
 import baseAdminWrapper from "./front/AdminWrapper"
 import baseAdmin from "./front/Admin"
@@ -8,6 +9,9 @@ import baseAdmin from "./front/Admin"
 class MyAdminModule extends Module {
     name = "admin"
     routers = [["/api", crud]]
+    initializers = {
+    	init
+    }
 }
 
 export const AdminModule = MyAdminModule
