@@ -1,7 +1,7 @@
 import { database, cache, createError } from "framz"
 
 export default (req, res, next) => {
-    const modelName = req.param.modelName
+    const modelName = req.params.modelName
     const cacheKey = `${modelName.toLowerCase()}_list`
     let paginationData = {
         page: req.query.page,
