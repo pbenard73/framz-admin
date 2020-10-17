@@ -7,7 +7,7 @@ import baseAdmin from "./front/Admin"
 
 class MyAdminModule extends Module {
     name = "admin"
-    routers = [["/api", crud]]
+    routers = ["/api", crud]
 }
 
 export const AdminModule = MyAdminModule
