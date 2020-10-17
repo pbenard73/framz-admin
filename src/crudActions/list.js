@@ -8,6 +8,7 @@ export default (req, res, next) => {
         perpage: req.query.perpage,
     }
 
+    console.log('jsuis la')
     const paginate = options => {
         database
             .getUrlRepository(modelName)
@@ -17,7 +18,7 @@ export default (req, res, next) => {
     }
 
 //    if (paginationData.page === null) {
-        return paginate
+        return paginate()
   //  }
 /*
     cache
