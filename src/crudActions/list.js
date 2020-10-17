@@ -1,6 +1,9 @@
 import { database, cache, createError } from "framz"
 
 export default (req, res, next) => {
+    if (req.isModelRoute === false) {
+        return next()
+    }
     const modelName = req.params.modelName
     const cacheKey = `${modelName.toLowerCase()}_list`
     let paginationData = {
@@ -16,10 +19,10 @@ export default (req, res, next) => {
             .catch(error => next(createError(500, error)))
     }
 
-//    if (paginationData.page === null) {
-        return paginate()
-  //  }
-/*
+    //    if (paginationData.page === null) {
+    return paginate()
+    //  }
+    /*
     cache
         .get(cacheKey)
         .then(data => {

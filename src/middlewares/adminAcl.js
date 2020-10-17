@@ -4,6 +4,7 @@ export default type => (req, res, next) => {
     const modelName = req.params.modelName
 
     if (database.hasUrlModel(modelName) === false) {
+        req.isModelRoute = false
         return next()
     }
 

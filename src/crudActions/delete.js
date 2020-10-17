@@ -1,6 +1,10 @@
 import { database, cache, createError } from "framz"
 
 export default (req, res, next) => {
+    if (req.isModelRoute === false) {
+        return next()
+    }
+	
     const modelName = req.param.modelName
     const cacheKey = `${modelName.toLowerCase()}_list`
     let paginationData = {
