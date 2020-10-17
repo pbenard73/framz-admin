@@ -1,7 +1,8 @@
 export default AdminModule;
-export const AdminWrapper: any;
-export const Admin: any;
+export const AdminWrapper: () => JSX.Element;
+export const Admin: typeof baseAdmin;
 declare class AdminModule {
     name: string;
     routers: any[][];
 }
+import baseAdmin from "./front/Admin";

@@ -5,7 +5,7 @@ const nodeExternals = require("webpack-node-externals")
 
 module.exports = {
     mode: "production",
-    entry: "./src/index.js",
+    entry: "./src/admin.js",
     externals: [nodeExternals()],
     output: {
         filename: "index.js",

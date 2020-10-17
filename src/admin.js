@@ -2,8 +2,8 @@ import { Module } from "framz"
 
 import crud from "./routers/crud"
 
-import AdminWrapper from "./front/AdminWrapper"
-import Admin from "./front/Admin"
+import baseAdminWrapper from "./front/AdminWrapper"
+import baseAdmin from "./front/Admin"
 
 class AdminModule extends Module {
     name = "admin"
