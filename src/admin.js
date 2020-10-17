@@ -10,7 +10,7 @@ class MyAdminModule extends Module {
     routers = [["/api", crud]]
 }
 
-export const AdminModule = MyAdminModule
+export const AdminModule = new MyAdminModule()
 
 export const AdminWrapper = baseAdminWrapper
 
