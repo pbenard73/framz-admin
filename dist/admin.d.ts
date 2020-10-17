@@ -1,4 +1,4 @@
-export const AdminModule: MyAdminModule;
+export const AdminModule: typeof MyAdminModule;
 export const AdminWrapper: () => JSX.Element;
 export const Admin: typeof baseAdmin;
 declare class MyAdminModule {
