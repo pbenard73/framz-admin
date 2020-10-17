@@ -1,4 +1,5 @@
-export default AdminModule;
+declare var _default: AdminModule;
+export default _default;
 export const AdminWrapper: () => JSX.Element;
 export const Admin: typeof baseAdmin;
 declare class AdminModule {

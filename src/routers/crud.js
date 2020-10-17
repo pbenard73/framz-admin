@@ -6,7 +6,7 @@ import getAction from "./../crudActions/get"
 import putAction from "./../crudActions/put"
 import postAction from "./../crudActions/post"
 import deleteAction from "./../crudActions/delete"
-console.log(Router)
+
 const router = Router()
 
 router.get("/:modelName", auth("list"), listAction)
