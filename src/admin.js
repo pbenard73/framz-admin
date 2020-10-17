@@ -5,12 +5,12 @@ import crud from "./routers/crud"
 import baseAdminWrapper from "./front/AdminWrapper"
 import baseAdmin from "./front/Admin"
 
-class AdminModule extends Module {
+class MyAdminModule extends Module {
     name = "admin"
     routers = [["/api", crud]]
 }
 
-export default new AdminModule()
+export const AdminModule = new MyAdminModule()
 
 export const AdminWrapper = baseAdminWrapper
 
