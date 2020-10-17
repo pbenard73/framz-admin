@@ -11,7 +11,7 @@ export default (req, res, next) => {
     console.log('jsuis la')
     const paginate = options => {
         database
-            .getUrlRepository(modelName)
+            .getUrlRepository(req, modelName)
             .paginate(paginationData)
             .then(data => res.json({ valid: true, data }))
             .catch(error => next(createError(500, error)))
