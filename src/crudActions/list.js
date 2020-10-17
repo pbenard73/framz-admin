@@ -8,6 +8,7 @@ export default (req, res, next) => {
         perpage: req.query.perpage,
     }
 
+    console.log(database.modelsUrl)
     console.log('jsuis la')
     const paginate = options => {
         database
