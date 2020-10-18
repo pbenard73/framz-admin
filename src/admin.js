@@ -10,6 +10,9 @@ import baseGenerator from './front/adminGenerator'
 class MyAdminModule extends Module {
     name = "admin"
     routers = [["/api", crud]]
+    publicPaths = [
+    	'./node_modules/framz-admin/build'
+    ]
     initializers = {
     	init
     }

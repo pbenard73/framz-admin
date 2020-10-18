@@ -6,7 +6,7 @@
     "scripts": {
         "start": "mv tsconfig.json tsconfig; react-scripts start",
         "build": "mv tsconfig tsconfig.json; rm -rf ./dist; ./node_modules/webpack/bin/webpack.js && npx tsc",
-        "react": "react-scripts build",
+        "react": "mv tsconfig.json tsconfig; react-scripts build; mv tsconfig tsconfig.json",
         "test": "jest",
         "lint": "node_modules/eslint/bin/eslint.js --fix src/*"
     },
