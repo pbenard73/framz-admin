@@ -10,6 +10,7 @@ export default type => async (req, res, next) => {
 
     const role = `ROLE_${database.modelsUrl[modelName].toUpperCase()}_${type.toUpperCase()}`
 
+    console.log('ADMIN GRNATED', await aclManager.isGranted(req, role))
     if ((await aclManager.isGranted(req, role)) === false) {
         return next(createError(403))
     }
