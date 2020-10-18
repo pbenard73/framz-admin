@@ -7,15 +7,13 @@ module.exports = {
     mode: "production",
     entry: "./src/admin.js",
     externals: [nodeExternals()],
+    target:"node",
     output: {
         filename: "index.js",
         path: path.resolve(__dirname, "dist"),
         library: "",
         libraryTarget: "commonjs",
     },
-node: {
-  fs: 'empty'
-},    
     plugins: [new CleanWebpackPlugin()],
     module: {
         rules: [
