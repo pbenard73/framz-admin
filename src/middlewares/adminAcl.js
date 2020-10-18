@@ -5,14 +5,12 @@ export default type => async (req, res, next) => {
 
     if (database.hasUrlModel(modelName) === false) {
         req.isModelRoute = false
-	console.log('MERDE ua pas de module')
         return next()
     }
 
     const role = `ROLE_${database.modelsUrl[modelName].toUpperCase()}_${type.toUpperCase()}`
 
-    console.log('ADMIN GRNATED', await aclManager.isGranted(req, role))
-    if ((await aclManager.isGranted(req, role)) === false) {
+    if ((await aclManager.isGranted(req, role, true)) === false) {
         return next(createError(403))
     }
 

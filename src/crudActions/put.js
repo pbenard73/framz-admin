@@ -1,4 +1,4 @@
-import { database, createError } from "framz"
+import { database, createError,  } from "framz"
 
 export default (req, res, next) => {
     if (req.isModelRoute === false) {
@@ -6,10 +6,11 @@ export default (req, res, next) => {
     }
 	
     const { modelName, id } = req.params
+    const data = req.body
 
     database
         .getUrlRepository(modelName)
-        .findById(id)
+        .update(data, {where: {id}})
         .then(data => res.json({ valid: true, data }))
         .catch(error => next(createError(500, error)))
 }
