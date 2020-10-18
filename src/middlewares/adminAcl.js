@@ -5,6 +5,7 @@ export default type => async (req, res, next) => {
 
     if (database.hasUrlModel(modelName) === false) {
         req.isModelRoute = false
+	console.log('MERDE ua pas de module')
         return next()
     }
 
