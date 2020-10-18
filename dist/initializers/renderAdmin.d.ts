@@ -1,1 +1,1 @@
-export default function _default(): any;
+export default function _default(prefix: any): any;

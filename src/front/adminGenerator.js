@@ -1,9 +1,12 @@
 import React from 'react'
 
 import Admin from './Admin'
+import { database } from 'framz'
 
-export default App => () => {
+export default App => props => {
+	const models = database.getModelsInfo(App)
+
 	return (
-		<Admin />
+		<Admin {...props} models={models}/>
 	)
 }

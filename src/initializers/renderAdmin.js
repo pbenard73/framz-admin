@@ -6,12 +6,14 @@ import { StaticRouter } from "react-router-dom"
 
 import generateAdmin from "./../front/adminGenerator"
 
-export default function () {
-    this.get(["/admin", "/admin/*"], (req, res) => {
+export default function (prefix) {
+    this.get([prefix, prefix + "/*"], (req, res) => {
         const Admin = generateAdmin(this)
         const app = ReactDOMServer.renderToString(
             <StaticRouter location={req.url}>
-                <Admin />
+                <Admin
+	       		locationPrefix={prefix}
+		/>
             </StaticRouter>
         )
         fs.readFile("node_modules/framz-admin/build/index", "utf8", (error, content) => {
