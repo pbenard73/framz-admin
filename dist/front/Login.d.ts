@@ -1,6 +1,2 @@
-export default Login;
-declare class Login extends React.Component<any, any, any> {
-    constructor(props: any);
-    constructor(props: any, context: any);
-}
-import React from "react";
+declare var _default: any;
+export default _default;
