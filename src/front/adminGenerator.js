@@ -1,5 +1,5 @@
 import React from "react"
-import { hocBuilder } from "reactizy"
+import { Store } from "reactizy"
 import Admin from "./Admin"
 import { database } from "framz"
 
@@ -11,11 +11,9 @@ export default App => props => {
         login: { path: "/api/login", method: "post" },
     }
 
-    Admin.hoc = hocBuilder(api)
-
     return (
         <Store apis={[api]} reduxers={[loginReduxer]}>
-            <Admin {...props} models={models} api={api} />
+            <Admin {...props} models={models} />
         </Store>
     )
 }
