@@ -8,6 +8,7 @@ class Login extends React.Component {
     }
 
     loginBindThis() {
+	    alert('alert something')
         this.props.api.call("login")
     }
 
